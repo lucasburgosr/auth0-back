@@ -1,5 +1,5 @@
-# Usamos una imagen base con JDK 22
-FROM openjdk:21-slim
+# Usamos una imagen base con JDK 17
+FROM openjdk:17-jdk-slim AS builder
 
 # Establecemos el directorio de trabajo dentro del contenedor
 WORKDIR /app
