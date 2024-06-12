@@ -1,5 +1,5 @@
 # Usamos una imagen base con JDK 22
-FROM openjdk:22-jdk-slim
+FROM openjdk:22-slim
 
 # Establecemos el directorio de trabajo dentro del contenedor
 WORKDIR /app
@@ -22,12 +22,16 @@ ENV CORS_ALLOWED_ORIGINS=http://localhost:5173
 ENV SPRING_SECURITY_LOG_LEVEL=INFO
 ENV WEB_SECURITY_DEBUG=true
 
-# Construimos el proyecto, incluyendo pruebas
-RUN ./gradlew build
+# Deshabilitar el daemon de Gradle
+RUN echo "org.gradle.daemon=false" >> /app/gradle.properties
+
+# Construimos el proyecto, deshabilitando el daemon de Gradle
+RUN ./gradlew --no-daemon clean build
 
 # Exponemos el puerto en el que la aplicación va a correr
 EXPOSE 8080
 
 # Definimos el comando para correr la aplicación
-CMD ["./gradlew", "bootRun"]
+CMD ["./gradlew", "bootRun", "--no-daemon"]
+
 
