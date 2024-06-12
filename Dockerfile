@@ -22,12 +22,6 @@ ENV CORS_ALLOWED_ORIGINS=https://auth0-front-seven.vercel.app/
 ENV SPRING_SECURITY_LOG_LEVEL=INFO
 ENV WEB_SECURITY_DEBUG=true
 
-# Deshabilitar el daemon de Gradle
-RUN echo "org.gradle.daemon=false" >> /app/gradle.properties
-
-# Construimos el proyecto, deshabilitando el daemon de Gradle
-RUN ./gradlew --no-daemon clean build
-
 # Exponemos el puerto en el que la aplicación va a correr
 EXPOSE 8080
 
