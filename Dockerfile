@@ -1,5 +1,5 @@
 # Usamos una imagen base con JDK 22
-FROM openjdk:22-slim
+FROM openjdk:21-slim
 
 # Establecemos el directorio de trabajo dentro del contenedor
 WORKDIR /app
