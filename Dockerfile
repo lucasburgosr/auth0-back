@@ -22,10 +22,7 @@ ENV CORS_ALLOWED_ORIGINS=https://auth0-front-seven.vercel.app/
 ENV SPRING_SECURITY_LOG_LEVEL=INFO
 ENV WEB_SECURITY_DEBUG=true
 
-# Exponemos el puerto en el que la aplicación va a correr
-EXPOSE 8080
-
 # Definimos el comando para correr la aplicación
-CMD ["./gradlew", "bootRun", "--no-daemon"]
+CMD ["./gradlew", "bootRun"]
 
 
