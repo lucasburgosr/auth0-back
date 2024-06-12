@@ -18,7 +18,7 @@ RUN chmod +x ./gradlew
 # Establecemos las variables de entorno necesarias
 ENV AUTH0_AUDIENCE=http://ejemploapi
 ENV AUTH0_ISSUER_URI=https://dev-ivcgfpif76bc7frn.us.auth0.com/
-ENV CORS_ALLOWED_ORIGINS=http://localhost:5173
+ENV CORS_ALLOWED_ORIGINS=https://auth0-front-seven.vercel.app/
 ENV SPRING_SECURITY_LOG_LEVEL=INFO
 ENV WEB_SECURITY_DEBUG=true
 
