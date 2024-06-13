@@ -1,0 +1,2 @@
+##Variables de entorno
+AUTH0_AUDIENCE=http://ejemploapi; AUTH0_ISSUER_URI=https://dev-ivcgfpif76bc7frn.us.auth0.com/; CORS_ALLOWED_ORIGINS=https://auth0-front-kappa.vercel.app/; WEB_SECURITY_DEBUG=true; SPRING_SECURITY_LOG_LEVEL=INFO
